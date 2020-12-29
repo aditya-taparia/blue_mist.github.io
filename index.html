@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- W3 CSS Script -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Material UI Script -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Font awesome script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/df305ffa42.js" crossorigin="anonymous"></script>
+
+    <!-- W3 Colour Script -->
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+
+    <!-- jQuery Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Aditya Taparia</title>
+
+    <!-- Favicon Image -->
+    <link rel="icon" href="Images/Personal Website Logo.ico" type="image/icon type">
+
+    <style media="screen">
+      /* Icons */
+      .material-icons {
+        vertical-align: -22.5%;
+      }
+
+      .w3-round-xlarge-top{
+        border-top-left-radius:16px;
+        border-top-right-radius:16px;
+      }
+
+      /* Background Image */
+      html {
+        background: url(images/Banner.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      /* Left Animation */
+      .w3-animate-left{
+        position:relative;animation:animateleft 1s
+        }
+      @keyframes animateleft{
+        from{left:-300px;opacity:0}
+        to{left:0;opacity:1}
+      }
+      /* Top Animation for Navigation */
+      .w3-animate-top1{
+        position:relative;
+        animation:animatetop 0.5s
+      }
+      .w3-animate-top2{
+        position:relative;
+        animation:animatetop 0.75s
+      }
+      .w3-animate-top3{
+        position:relative;
+        animation:animatetop 1s
+      }
+      .w3-animate-top4{
+        position:relative;
+        animation:animatetop 1.25s
+      }
+      .w3-animate-top5{
+        position:relative;
+        animation:animatetop 1.5s
+      }
+      .w3-animate-top6{
+        position:relative;
+        animation:animatetop 1.75s
+      }
+      .w3-animate-top{
+        position:relative;
+        animation:animatetop 1s
+      }
+      @keyframes animatetop{
+        from{top:-300px;opacity:0}
+        to{top:0;opacity:1}
+      }
+
+      /* Zoom Effect */
+      .w3-animate-zoom {
+        animation:animatezoom 1s
+      }
+      @keyframes animatezoom{
+        from{transform:scale(0)}
+        to{transform:scale(1)}
+      }
+
+      /* Icon for list */
+      .mi-green>li:before{
+          content: 'arrow_right';
+          font-family: 'Material Icons';
+          font-size: 25px;
+          vertical-align: -22%;
+          color: forestgreen;
+      }
+      .mi-red>li:before{
+          content: 'arrow_right';
+          font-family: 'Material Icons';
+          font-size: 25px;
+          vertical-align: -22%;
+          color: crimson;
+      }
+      .mi-blue>li:before{
+          content: 'arrow_right';
+          font-family: 'Material Icons';
+          font-size: 25px;
+          vertical-align: -22%;
+          color: dodgerblue;
+      }
+      ul{
+        list-style-type: none;
+      }
+
+      /* Horixontal Rule */
+      hr.w3-div{
+        border: 2px solid orange;
+        border-radius: 5px;
+      }
+
+      .w3-hover-pale-purple:hover{
+         color:#9c27b0!important;
+         background-color:#fff0f5!important
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+
+    <script>
+
+     // Sidebar Open and Close function for mobile view
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+
+      // Smooth Scrolling to a height
+      $(document).on('click', 'a[href^="#"]', function(e) {
+          // target element id
+          var id = $(this).attr('href');
+
+          // target element
+          var $id = $(id);
+          if ($id.length === 0) {
+              return;
+          }
+
+          // prevent standard hash navigation (avoid blinking in IE)
+          e.preventDefault();
+
+          // top position relative to the document
+          var pos = $id.offset().top - 100;
+
+          // animated top scrolling
+          $('body, html').animate({scrollTop: pos});
+      });
+
+
+      // Function for Skills tabs
+      function run(name) {
+        var i;
+        var x = document.getElementsByClassName("magic");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(name).style.display = "block";
+      }
+
+
+      // Gfg contribution button
+      function contribution(){
+        window.open("https://auth.geeksforgeeks.org/user/aditya_taparia/articles");
+      }
+
+      // Project-1 button
+      function github_project_1(){
+        window.open("https://github.com/aditya-taparia/Realtime-facerecognition-");
+      }
+
+      // Project-2 button
+      function github_project_2(){
+        window.open("https://github.com/aditya-taparia/ImageEditor-Tkinter-Application");
+      }
+
+      // Contact Buttons
+      function linked_in_open(){
+        window.open("https://www.linkedin.com/in/aditya-taparia/");
+      }
+      function email_open(){
+        window.open("mailto:aditya2019@iiitkottayam.ac.in");
+      }
+      function whatsapp_open(){
+        window.open("https://api.whatsapp.com/send?phone=916353757151");
+      }
+      function github_open(){
+        window.open("https://github.com/aditya-taparia");
+      }
+
+      function logo_reload(){
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class = "w3-top w3-cursive" id="header" style="z-index:5;">
+
+      <!-- Navigation Bar for Large screens -->
+      <div class="w3-bar w3-2017-navy-peony w3-card-4 w3-hide-medium w3-hide-small">
+        <!-- Resume Button -->
+        <a href="Files/Resume.pdf" target="_blank" download="Aditya Taparia Resume">
+        <button type="button" class="w3-animate-top6 w3-animate-opacity w3-ripple w3-button w3-margin w3-round w3-medium w3-bar-item w3-hover-light-blue w3-text-white w3-right w3-hover-opacity w3-border w3-border-light-blue">
+          <i class="material-icons w3-text-blue">get_app</i> Resume
+        </button>
+      </a>
+
+        <a href="#contact-me"
+          class="w3-animate-top5 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-green w3-right">
+            <i class="material-icons w3-text-teal">contacts</i> Contact Me
+        </a>
+        <a href="#projects"
+          class="w3-animate-top4 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-red w3-right">
+            <i class="material-icons w3-text-pink">work_outline</i> Projects
+        </a>
+        <a href="#internships"
+          class="w3-animate-top3 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-amber w3-right">
+            <i class="material-icons w3-text-orange">business</i> Internships
+        </a>
+        <a href="#skills"
+          class="w3-animate-top2 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-lime w3-right">
+            <i class="material-icons w3-text-green">task_alt</i> Skills
+        </a>
+        <a href="#about-me"
+          class="w3-animate-top1 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-blue w3-right">
+            <i class="material-icons w3-text-blue">person</i> About Me
+        </a>
+
+        <!-- Logo -->
+        <img
+          onclick="logo_reload()"
+          src="Images/Personal Website Logo.png"
+          alt="Logo"
+          class="w3-animate-zoom w3-hover-opacity-off w3-opacity w3-image w3-left w3-margin"
+          style="width:45px; height:45px; transition:0.5s;"
+          title="Logo">
+        </img>
+      </div>
+
+      <!-- Navigation Bar for medium and small screens -->
+      <!-- Menu Option -->
+      <div class = "w3-animate-top w3-center w3-bar w3-2017-navy-peony w3-card-4 w3-hide-large w3-show-medium w3-show-small">
+        <!-- Menu Button -->
+        <div class = "w3-margin w3-round w3-medium w3-bar-item w3-right w3-hover-light-blue w3-text-white w3-hover-opacity w3-border w3-border-light-blue w3-button" onclick="w3_open()">
+          <i class="material-icons">menu</i>
+        </div>
+        <div class="">
+          <img
+            onclick="logo_reload()"
+            src="Images/Personal Website Logo.png"
+            alt="Logo"
+            class="w3-animate-zoom w3-hover-opacity-off w3-opacity w3-image w3-left w3-margin"
+            style="width:45px; height:45px; transition:0.5s;"
+            title="Logo">
+          </img>
+        </div>
+        <!-- Menu or Sidebar -->
+        <div class="w3-padding-16 w3-sidebar w3-bar-block w3-2017-navy-peony w3-card-4 w3-animate-right" style="display: none; z-index:4;right:0" id="mySidebar">
+
+          <!-- Sidebar Image -->
+          <div class="w3-container w3-bar-item  w3-center">
+            <img
+              src="Images/sidebar.png"
+              alt="sidebar-image"
+              class="w3-image"
+              title="Sidebar Image">
+            </img>
+          </div>
+
+          <a href="#about-me" onclick="w3_close()"
+            class="w3-margin-top w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-blue">
+              <i class="material-icons w3-text-blue">person</i> About Me
+          </a>
+          <a href="#skills"  onclick="w3_close()"
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-lime w3-right">
+              <i class="material-icons w3-text-green">task_alt</i> Skills
+          </a>
+          <a href="#internships" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-amber w3-right">
+              <i class="material-icons w3-text-orange">business</i> Internships
+          </a>
+          <a href="#projects" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-red w3-right">
+              <i class="material-icons w3-text-pink">work_outline</i> Projects
+          </a>
+          <a href="#contact-me" onclick="w3_close()"
+            class="w3-margin-bottom w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-green w3-right">
+              <i class="material-icons w3-text-teal">contacts</i> Contact Me
+          </a>
+          <!-- Resume Button -->
+          <div class="w3-panel w3-bar-item w3-hover-none w3-center">
+            <a href="Files/Resume.pdf" target="_blank" download="Aditya Taparia Resume">
+              <button class="w3-center w3-margin-top w3-ripple w3-button w3-round w3-medium w3-hover-light-blue w3-text-white w3-center w3-hover-opacity w3-border w3-border-light-blue" width="100%;">
+                <i class="material-icons w3-text-blue">get_app</i> Resume
+              </button>
+            </a>
+          </div>
+        </div>
+        <!-- Close Button -->
+        <div class="w3-overlay" onclick="w3_close()" id = "myOverlay" style="cursor:pointer"></div>
+      </div>
+    </div>
+
+    <!-- Body of the page -->
+    <!-- Top (Introduction) -->
+
+    <div class="w3-panel w3-animate-left">
+
+      <!-- Introduction For Big Screen -->
+      <div class = "w3-hide-medium w3-hide-small w3-display-container" style = "height: 100vh;">
+        <span class = "w3-display-position" style="top: 25vh; left: 25vw;">
+          <span class="w3-content w3-left-align w3-cursive">
+            <span class= "w3-xlarge w3-text-blue">
+              Hi, my name is<br>
+            </span>
+            <span class="w3-jumbo w3-text-pink">
+              Aditya Taparia.<br>
+            </span>
+            <span class="w3-panel w3-xlarge w3-text-teal">
+              I am currently a student at Indian Institute of Information<br> Technology, Kottayam.
+            </span>
+          </span>
+        </span>
+      </div>
+
+      <!-- Introduction for Medium Screens -->
+      <div class = "w3-hide-large w3-hide-small w3-display-container" style = "height: 100vh;">
+        <span class = "w3-display-position" style="top: 25vh; left: 22vw;">
+          <span class="w3-content w3-left-align w3-cursive">
+            <span class= "w3-xlarge w3-text-blue">
+              Hi, my name is<br>
+            </span>
+            <span class="w3-jumbo w3-text-pink">
+              Aditya Taparia.<br>
+            </span>
+            <span class="w3-panel w3-xlarge w3-text-teal">
+              I am currently a student at IIIT-Kottayam.
+            </span>
+          </span>
+        </span>
+      </div>
+
+      <!-- Introduction for Small Screens -->
+      <div class = "w3-hide-large w3-hide-medium w3-display-container" style = "height: 100vh;">
+        <span class = "w3-display-position" style="top: 25vh; left: 10vw;">
+          <span class="w3-content w3-left-align w3-cursive">
+            <span class= "w3-panel w3-large w3-text-blue">
+              Hi, my name is<br>
+            </span>
+            <span class="w3-panel w3-xlarge w3-text-pink">
+              <b>Aditya Taparia.</b><br>
+            </span>
+            <span class="w3-panel w3-large w3-text-teal">
+              I am currently a student at IIIT-Kottayam.
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class= "w3-container w3-white w3-round-xlarge-top w3-card-4">
+
+      <!-- About Me-->
+      <!-- For Big, medium and small screens -->
+      <div class = "w3-padding w3-panel w3-white" id="about-me">
+        <div class="w3-content">
+          <span class="w3-hide-small w3-left w3-text-pink w3-cursive w3-xxlarge">About Me:</span>
+          <div class="w3-container w3-center">
+            <span class="w3-hide-large w3-hide-medium w3-text-pink w3-cursive w3-xxlarge">About Me</span>
+          </div>
+          <br>
+          <div class = "w3-row">
+            <div class="w3-row w3-center">
+              <img
+                src="Images/Photo.png"
+                class="w3-hide-large w3-hide-medium w3-image w3-padding w3-opacity-min w3-hover-opacity-off"
+                alt="user-photo"
+                style="transition: 1s; cursor: pointer; height: 50%; width: 50%;"
+                title="Aditya Taparia">
+              </img>
+            </div>
+            <div class="w3-col m8 l8">
+              <p class="w3-left w3-text-blue w3-cursive w3-large">
+
+                Hello! I'm Aditya, a CS Student from Indian Institute of Information Technology, Kottayam.<br><br>
+                I am currently pursuing my B.Tech Degree.
+                I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
+                I also love learning about new technology and using new development applications.
+                <br><br>
+                Here are a few technologies I've been working with recently:
+              </p>
+              <div class="w3-row w3-text-teal w3-cursive">
+                <div class="w3-hide-small w3-col m3 l3">
+                  <ul class="mi-green">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java Script</li>
+                  </ul>
+                </div>
+                <div class="w3-hide-small w3-col m3 l3">
+                  <ul class="mi-green">
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>PHP</li>
+                  </ul>
+                </div>
+
+                <div class="w3-hide-large w3-hide-medium">
+                  <ul class="mi-green">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java Script</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>PHP</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="w3-col m4 l4">
+              <img
+                src="Images/Photo.png"
+                class="w3-hide-small w3-image w3-padding w3-opacity-min w3-hover-opacity-off"
+                alt="user-photo"
+                style="transition: 1s; cursor: pointer;"
+                title="Aditya Taparia">
+              </img>
+            </div>
+          </div>
+          <hr class="w3-div">
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class = "w3-container w3-white" id="skills">
+
+        <!-- For large and medium screens -->
+        <div class="w3-content">
+          <span class="w3-hide-small w3-left w3-text-pink w3-cursive w3-xxlarge">Skills:</span>
+          <div class="w3-container w3-center">
+            <span class="w3-hide-large w3-hide-medium w3-text-pink w3-cursive w3-xxlarge">Skills</span>
+          </div>
+          <br>
+          <div class="w3-hide-small w3-cursive">
+            <div class="w3-bar">
+              <div class="w3-large w3-bar-item w3-button w3-pink w3-text-pale-red w3-hover-pale-red w3-hover-text-pink" onclick="run('fed')" style="border-top-left-radius: 10px;">
+                Web Development
+              </div>
+              <div class="w3-large w3-bar-item w3-button w3-blue w3-text-pale-blue w3-hover-pale-blue w3-hover-text-blue" onclick="run('bed')">
+                Application Development
+              </div>
+              <div class="w3-large w3-bar-item w3-button w3-teal w3-text-pale-green w3-hover-pale-green w3-hover-text-teal" onclick="run('pro')" style="border-top-right-radius: 10px;">
+                Computer Programming
+              </div>
+            </div>
+            <div id="fed" class="w3-container magic w3-pale-red" style="border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+              <ul class="mi-red w3-text-red">
+                <li>HTML and CSS</li>
+                <li>BootStrap</li>
+                <li>Java Script and jQuery</li>
+                <li>MySql</li>
+                <li>PHP</li>
+                <li>AMP Technology</li>
+              </ul>
+            </div>
+            <div id="bed" class="w3-container magic w3-pale-blue" style="display:none; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+              <ul class="mi-blue w3-text-blue">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Android Studio</li>
+              </ul>
+            </div>
+            <div id="pro" class="w3-container magic w3-pale-green" style="display:none; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+              <ul class="mi-green w3-text-green">
+                <li>C/C++ Programming</li>
+                <li>Java Programming</li>
+                <li>Python 3.9 Programming</li>
+                <li>Dart Programming</li>
+                <li>Golang</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- For small screens only -->
+          <div class="w3-hide-medium w3-cursive w3-hide-large">
+            <div class="w3-row">
+              <div class="w3-third w3-panel">
+                <div class="w3-card-4 w3-round-xlarge">
+                  <header class="w3-padding-16 w3-center w3-round-xlarge-top w3-panel w3-blue w3-text-white w3-large w3-card-4">Web Development</header>
+                  <div class="w3-container" style="left:-7vw; position:relative;">
+                    <ul class="mi-blue w3-text-blue">
+                      <li>HTML and CSS</li>
+                      <li>BootStrap</li>
+                      <li>JavaScript and jQuery</li>
+                      <li>MySql</li>
+                      <li>PHP</li>
+                      <li>AMP Technology</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-third w3-panel">
+                <div class="w3-card-4 w3-round-xlarge">
+                  <header class="w3-padding-16 w3-center w3-round-xlarge-top w3-panel w3-pink w3-text-white w3-large w3-card-4">Application Development</header>
+                  <div class="w3-container" style="left:-7vw; position:relative;">
+                    <ul class="mi-red w3-text-pink">
+                      <li>Flutter</li>
+                      <li>Dart</li>
+                      <li>Android Studio</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-third w3-panel">
+                <div class="w3-card-4 w3-round-xlarge">
+                  <header class="w3-padding-16 w3-center w3-round-xlarge-top w3-panel w3-teal w3-text-white w3-large w3-card-4">Computer Programming</header>
+                  <div class="w3-container" style="left:-7vw; position:relative;">
+                    <ul class="mi-green w3-text-teal">
+                      <li>C/C++ Programming</li>
+                      <li>Java Programming</li>
+                      <li>Python 3.9 Programming</li>
+                      <li>Dart Programming</li>
+                      <li>Golang</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="w3-div">
+        </div>
+      </div>
+
+      <!-- Internships-->
+      <br>
+      <div class = "w3-container w3-white" id="internships">
+        <div class="w3-content">
+          <span class="w3-hide-small w3-left w3-text-pink w3-cursive w3-xxlarge">Internships:</span>
+          <div class="w3-container w3-center">
+            <span class="w3-hide-large w3-hide-medium w3-text-pink w3-cursive w3-xxlarge">Internships</span>
+          </div>
+          <br>
+          <div class="w3-row  w3-cursive">
+
+            <!-- Internship-1 Panel (Gfg)-->
+            <div class="w3-third w3-panel">
+              <div class="w3-card-4 w3-round-xlarge">
+                <header class="w3-padding-16 w3-card-4 w3-center w3-round-xlarge-top w3-panel w3-teal w3-text-white w3-xlarge">
+                  @GeeksForGeeks
+                </header>
+                <div class="w3-center">
+                  <img class="w3-image" title="GeeksForGeeks Logo" alt="GFG Logo" src="Images/gfg-logo.png" style="height:100px; width:100px;"></img>
+                  <p class="w3-padding-16 w3-margin">I have worked as a content developer at GFG.<span class="w3-hide-small"> I have successfully contributed more than 150 articles and few improvements on various topics during my internship course.</span> You can check out my contribution from the link given below:<br>
+                  <button class="w3-teal w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-green w3-border w3-round w3-border-teal w3-hover-text-teal w3-hover-border-teal w3-button" onclick="contribution()" style="transition:0.5s;"><i class="material-icons">language</i> Contribution</button></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Internship-2 Panel (Bolt IoT) -->
+            <div class="w3-third w3-panel">
+              <div class="w3-card-4 w3-round-xlarge">
+                <header class="w3-padding-16 w3-card-4 w3-center w3-round-xlarge-top w3-panel w3-orange w3-text-white w3-xlarge">
+                  @Bolt IoT
+                </header>
+                <div class="w3-center">
+                  <img class="w3-image" title="Bolt IoT Logo" alt="Bolt IoT Logo" src="Images/bolt-iot-logo.jpg" style="height:100px; width:100px;"></img>
+                  <p class="w3-padding-16 w3-margin">I have worked as a promoter of the IoT and ML online training at Bolt IoT. <span class="w3-hide-small">I have also tried to spread awareness regarding the IoT and ML training through social media and by taking various webinars regarding the same.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden Internship-3 panel -->
+            <div class="w3-hide w3-third w3-panel">
+              <div class="w3-card-4 w3-round-large"></div>
+            </div>
+          </div>
+
+          <!-- Extra Internship Panel
+          <div class="w3-row">
+            <div class="w3-third w3-panel">hello</div>
+            <div class="w3-third w3-panel">hello</div>
+            <div class="w3-third w3-panel">hello</div>
+          </div>
+          -->
+          <hr class="w3-div">
+        </div>
+      </div>
+      <br>
+
+      <!-- Projects -->
+      <div class = "w3-container w3-white" id="projects">
+        <div class="w3-content">
+          <span class="w3-hide-small w3-left w3-text-pink w3-cursive w3-xxlarge">Projects:</span>
+          <div class="w3-container w3-center">
+            <span class="w3-hide-large w3-hide-medium w3-text-pink w3-cursive w3-xxlarge">Projects</span>
+          </div>
+          <br>
+
+          <!-- Project - 1 (Realtime-Face Recognition)-->
+          <div class="w3-hide-small w3-panel w3-cursive w3-round-large w3-center w3-row">
+            <div class="w3-col m4 l6">
+              <img
+                src="Images/Photo-2.png"
+                class="w3-button w3-image w3-padding w3-hover-none"
+                alt="Facial Recognition"
+                style="transition: 1s; cursor: pointer; right: -5vw; top:-5vh; position: relative;"
+                title="Facial Recognition"
+                onclick="github_project_1()">
+              </img>
+            </div>
+            <div class = "w3-col m8 l6">
+              <div class="w3-card-4 w3-white w3-round-xlarge" style="z-index:1; position: relative">
+                <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-purple w3-text-white w3-xxlarge">Realtime Face-Recognition</p>
+                <p class = "w3-container w3-margin w3-padding-16 w3-text-purple">This is a Python Applicaton program to recognise the person in real-time which uses OpenCV library for back-end and tkinter library for front-end. This application allows user to select the image of the person who he wants to be detected, thus making it completely dynamic in nature.<br>
+              <button class="w3-purple w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-red w3-border w3-round w3-border-purple w3-hover-text-purple w3-hover-border-purple w3-button" onclick="github_project_1()" style="transition:0.5s;"><i class="fab fa-github"></i> Github</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-hide-large w3-hide-medium w3-panel w3-cursive w3-round-large w3-center w3-row">
+            <div class="w3-col m12 l12">
+              <div class="w3-card-4 w3-white w3-round-xlarge">
+                <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-purple w3-text-white w3-xlarge">Realtime Face-Recognition</p>
+                <div class="w3-row w3-center">
+                  <img
+                    src="Images/Photo-2.png"
+                    class="w3-button w3-image w3-padding w3-hover-none"
+                    alt="Facial Recognition"
+                    style="transition: 1s; cursor: pointer;"
+                    title="Facial Recognition"
+                    onclick="github_project_1()">
+                  </img>
+                </div>
+                <p class = "w3-container w3-margin w3-padding-16 w3-text-purple">This is a Python Applicaton program to recognise the person in real-time which uses OpenCV library for back-end and tkinter library for front-end.<br>
+                  <button class="w3-purple w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-red w3-border w3-round w3-border-purple w3-hover-text-purple w3-hover-border-purple w3-button"
+                          onclick="github_project_1()"
+                          style="transition:0.5s;">
+                            <i class="fab fa-github"></i> Github
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Project - 2  (ImageEditor-Tkinter-Application)-->
+          <div class="w3-hide-small w3-panel w3-cursive w3-round-large w3-center w3-row">
+            <div class = "w3-col m8 l5">
+              <div class="w3-card-4 w3-white w3-round-xlarge" style="z-index:1; position: relative">
+                <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-deep-orange w3-text-white w3-xxlarge">Image Editor</p>
+                <p class = "w3-container w3-margin w3-padding-16 w3-text-deep-orange">This is a Python Applicaton program for editing images which uses OpenCV library for back-end and tkinter library for front-end. This application allows user to select the image and edit it. It is comprise of sketch filter, image sharpening filter, cartoon filter, contour filter and kelvin filter. Apart from that one can also adjust brightness and contrast on the image and also save the image at any moment he wants.<br>
+              <button class="w3-deep-orange w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-yellow w3-border w3-round w3-border-deep-orange w3-hover-text-deep-orange w3-hover-border-deep-orange w3-button" onclick="github_project_2()" style="transition:0.5s;"><i class="fab fa-github"></i> Github</button></p>
+              </div>
+            </div>
+            <div class="w3-col m4 l7">
+              <img
+                src="Images/Photo-3.png"
+                class="w3-button w3-image w3-padding w3-hover-none"
+                alt="Facial Recognition"
+                style="transition: 1s; cursor: pointer; right: 5vw; top:-5vh; position: relative;"
+                title="Image Editor"
+                onclick="github_project_2()">
+              </img>
+            </div>
+          </div>
+
+          <div class="w3-hide-large w3-hide-medium w3-panel w3-cursive w3-round-large w3-center w3-row">
+            <div class="w3-col m12 l12">
+              <div class="w3-card-4 w3-white w3-round-xlarge">
+                <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-deep-orange w3-text-white w3-xlarge">Image Editor</p>
+                <div class="w3-row w3-center">
+                  <img
+                    src="Images/Photo-3.png"
+                    class="w3-button w3-image w3-padding w3-hover-none"
+                    alt="Facial Recognition"
+                    style="transition: 1s; cursor: pointer;"
+                    title="Image Editor"
+                    onclick="github_project_2()">
+                  </img>
+                </div>
+                <p class = "w3-container w3-margin w3-padding-16 w3-text-deep-orange">This is a Python Applicaton program for editing images which uses OpenCV library for back-end and tkinter library for front-end.<br>
+                  <button class="w3-deep-orange w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-yellow w3-border w3-round w3-border-deep-orange w3-hover-text-deep-orange w3-hover-border-deep-orange w3-button"
+                          onclick="github_project_2()"
+                          style="transition:0.5s;">
+                            <i class="fab fa-github"></i> Github
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Extra Projects Button
+
+          <div class="w3-container" id="more" style="display:none;">hello</div>
+          <div class="w3-panel w3-center w3-cursive">
+            <button class="w3-button w3-pink w3-padding-16 w3-round w3-hover-pale-red w3-hover-text-pink w3-border w3-border-pink w3-hover-border-pink" onclick="toggle()" id="btn">
+              <span id="s" style="display:block;">Show More</span>
+              <span id="h" style="display:none;">Show Less</span>
+            </button>
+          </div>
+          <script>
+            $("#btn").click(function(){
+              $("#more").toggle(1000);
+              $("#s").toggle();
+              $("#h").toggle();
+            });
+          </script>-->
+        </div>
+      </div>
+
+      <!-- Contact Me -->
+    </div>
+    <div class = "w3-container w3-2017-lapis-blue" id="contact-me">
+      <!-- Medium and Large Screens -->
+      <div class="w3-content w3-center w3-panel">
+        <p class="w3-padding-16 w3-center w3-cursive w3-xlarge w3-text-light-blue w3-hide-small"><b>Contact</b><br>
+          <span class="w3-text-white w3-xxlarge">I'd Love To Connect With You.</span><br>
+          <span class="w3-text-light-green w3-xlarge">Let me get to know more about you.</span>
+        </p>
+
+        <!-- Small Screens -->
+        <p class="w3-center w3-cursive w3-large w3-text-light-blue w3-hide-large w3-hide-medium"><b>Contact</b><br>
+          <span class="w3-text-white w3-xlarge">I'd Love To Connect With You.</span><br>
+          <span class="w3-text-light-green w3-large">Let me get to know more about you.</span>
+        </p>
+
+        <div class="w3-bar w3-cursive w3-hide-small" style="cursor:pointer;">
+          <div class="w3-bar-item w3-round-large w3-mobile w3-hover-pale-blue w3-hover-text-blue" onclick="linked_in_open()"><i class="fab fa-linkedin-in w3-xxlarge"></i><br> Linked In</div>
+          <div class="w3-bar-item w3-mobile w3-round-large w3-hover-pale-red w3-hover-text-pink" onclick="email_open()"><i class="material-icons w3-xxlarge">email</i><br>E-Mail</div>
+          <div class="w3-bar-item w3-mobile w3-round-large w3-hover-pale-green w3-hover-text-teal" onclick="whatsapp_open()"><i class="fab fa-whatsapp w3-xxlarge"></i><br>WhatsApp</div>
+          <div class="w3-bar-item w3-mobile w3-round-large w3-hover-pale-purple w3-hover-text-purple" onclick="github_open()"><i class="fab fa-github w3-xxlarge"></i><br>Github</div>
+        </div>
+        <div class="w3-bar w3-cursive w3-hide-large w3-hide-medium" style="cursor:pointer;">
+          <div class="w3-bar-item w3-round-large w3-mobile" onclick="linked_in_open()"><i class="fab fa-linkedin-in w3-xxlarge"></i><br> Linked In</div>
+          <div class="w3-bar-item w3-mobile w3-round-large" onclick="email_open()"><i class="material-icons w3-xxlarge">email</i><br>E-Mail</div>
+          <div class="w3-bar-item w3-mobile w3-round-large" onclick="whatsapp_open()"><i class="fab fa-whatsapp w3-xxlarge"></i><br>WhatsApp</div>
+          <div class="w3-bar-item w3-mobile w3-round-large" onclick="github_open()"><i class="fab fa-github w3-xxlarge"></i><br>Github</div>
+        </div>
+        <hr>
+        <p class="w3-center w3-cursive w3-small w3-panel">This site is maintain, designed and developed by Aditya Taparia.</p>
+      </div>
+    </div>
+  </body>
+</html>
