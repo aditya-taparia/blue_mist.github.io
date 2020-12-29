@@ -1,2 +1,2 @@
-# blue_mist.github.io
+# aditya-taparia.github.io
 This is my personal website...
