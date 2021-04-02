@@ -135,8 +135,7 @@
       ::-webkit-scrollbar {
         display: none;
       }
-      
-      /* Disabling Text Highlight */
+
       body, html{
           -webkit-touch-callout: none;
           -webkit-user-select: none;
@@ -148,13 +147,18 @@
     </style>
 
     <script>
-      
-     // Disabling right Click
-      $(document).ready(function () {
+
+     $(document).ready(function () {
            $(document).bind("contextmenu", function (e) {
                return false;
            });
-      });
+           // Show More button
+           $("#btn").click(function(){
+             $("#more").toggle(500);
+             $("#s").toggle();
+             $("#h").toggle();
+           });
+     });
 
      // Sidebar Open and Close function for mobile view
       function w3_open() {
@@ -215,6 +219,16 @@
         window.open("https://github.com/aditya-taparia/ImageEditor-Tkinter-Application");
       }
 
+      // Project-3 button
+      function github_project_3(){
+        window.open("https://github.com/aditya-taparia/HTMLPad");
+      }
+
+      // Project-3 website
+      function github_project_3_website(){
+        window.open("https://aditya-taparia.github.io/HTMLPad/");
+      }
+
       // Contact Buttons
       function linked_in_open(){
         window.open("https://www.linkedin.com/in/aditya-taparia/");
@@ -248,23 +262,23 @@
       </a>
 
         <a href="#contact-me"
-          class="w3-animate-top5 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-green w3-right">
+          class="w3-animate-top5 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-teal w3-right">
             <i class="material-icons w3-text-teal">contacts</i> Contact Me
         </a>
         <a href="#projects"
-          class="w3-animate-top4 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-red w3-right">
+          class="w3-animate-top4 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-pink w3-right">
             <i class="material-icons w3-text-pink">work_outline</i> Projects
         </a>
         <a href="#internships"
-          class="w3-animate-top3 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-amber w3-right">
+          class="w3-animate-top3 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-orange w3-right">
             <i class="material-icons w3-text-orange">business</i> Internships
         </a>
         <a href="#skills"
-          class="w3-animate-top2 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-lime w3-right">
+          class="w3-animate-top2 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-green w3-right">
             <i class="material-icons w3-text-green">task_alt</i> Skills
         </a>
         <a href="#about-me"
-          class="w3-animate-top1 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-blue w3-right">
+          class="w3-animate-top1 w3-section w3-medium w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-blue w3-right">
             <i class="material-icons w3-text-blue">person</i> About Me
         </a>
 
@@ -302,6 +316,7 @@
           <!-- Sidebar Image -->
           <div class="w3-container w3-bar-item  w3-center">
             <img
+              onclick="w3_close()"
               src="Images/sidebar.png"
               alt="sidebar-image"
               class="w3-image"
@@ -310,29 +325,29 @@
           </div>
 
           <a href="#about-me" onclick="w3_close()"
-            class="w3-margin-top w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-blue">
+            class="w3-margin-top w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-blue">
               <i class="material-icons w3-text-blue">person</i> About Me
           </a>
           <a href="#skills"  onclick="w3_close()"
-            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-lime w3-right">
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-green w3-right">
               <i class="material-icons w3-text-green">task_alt</i> Skills
           </a>
           <a href="#internships" onclick="w3_close()"
-            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-amber w3-right">
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-orange w3-right">
               <i class="material-icons w3-text-orange">business</i> Internships
           </a>
           <a href="#projects" onclick="w3_close()"
-            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-red w3-right">
+            class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-pink w3-right">
               <i class="material-icons w3-text-pink">work_outline</i> Projects
           </a>
           <a href="#contact-me" onclick="w3_close()"
-            class="w3-margin-bottom w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-light-green w3-right">
+            class="w3-margin-bottom w3-bar-item w3-button w3-hover-none w3-text-white w3-hover-text-teal w3-right">
               <i class="material-icons w3-text-teal">contacts</i> Contact Me
           </a>
           <!-- Resume Button -->
           <div class="w3-panel w3-bar-item w3-hover-none w3-center">
             <a href="Files/Resume.pdf" target="_blank" download="Aditya Taparia Resume">
-              <button class="w3-center w3-margin-top w3-ripple w3-button w3-round w3-xlarge w3-hover-light-blue w3-text-white w3-center w3-hover-opacity w3-border w3-border-light-blue" width="100%;">
+              <button class="w3-center w3-margin-top w3-ripple w3-button w3-round w3-medium w3-hover-light-blue w3-text-white w3-center w3-hover-opacity w3-border w3-border-light-blue" width="100%;">
                 <i class="material-icons w3-text-blue">get_app</i> Resume
               </button>
             </a>
@@ -423,7 +438,7 @@
             <div class="w3-col m8 l8">
               <p class="w3-left w3-text-blue w3-cursive w3-large">
 
-                Hello! I'm Aditya Taparia, a CS Student from Indian Institute of Information Technology, Kottayam.<br><br>
+                Hello! I'm Aditya, a CS Student from Indian Institute of Information Technology, Kottayam.<br><br>
                 I am currently pursuing my B.Tech Degree.
                 I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
                 I also love learning about new technology and using new development applications.
@@ -503,6 +518,7 @@
                 <li>MySql</li>
                 <li>PHP</li>
                 <li>AMP Technology</li>
+                <li>React JS</li>
               </ul>
             </div>
             <div id="bed" class="w3-container magic w3-pale-blue" style="display:none; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
@@ -516,7 +532,7 @@
               <ul class="mi-green w3-text-green">
                 <li>C/C++ Programming</li>
                 <li>Java Programming</li>
-                <li>Python 3.9 Programming</li>
+                <li>Python Programming</li>
                 <li>Dart Programming</li>
                 <li>Golang</li>
               </ul>
@@ -537,6 +553,7 @@
                       <li>MySql</li>
                       <li>PHP</li>
                       <li>AMP Technology</li>
+                      <li>React JS</li>
                     </ul>
                   </div>
                 </div>
@@ -560,7 +577,7 @@
                     <ul class="mi-green w3-text-teal">
                       <li>C/C++ Programming</li>
                       <li>Java Programming</li>
-                      <li>Python 3.9 Programming</li>
+                      <li>Python Programming</li>
                       <li>Dart Programming</li>
                       <li>Golang</li>
                     </ul>
@@ -592,7 +609,7 @@
                 </header>
                 <div class="w3-center">
                   <img class="w3-image" title="GeeksForGeeks Logo" alt="GFG Logo" src="Images/gfg-logo.png" style="height:100px; width:100px;"></img>
-                  <p class="w3-padding-16 w3-margin">I have worked as a content developer at GFG.<span class="w3-hide-small"> I have successfully contributed more than 150 articles and few improvements on various topics during my internship course.</span> You can check out my contribution from the link given below:<br>
+                  <p class="w3-padding-16 w3-margin">I have worked as a content developer at GFG.<span class="w3-hide-small"> I have successfully contributed more than 200 articles and few improvements on various topics during my internship course.</span> You can check out my contribution from the link given below:<br>
                   <button class="w3-teal w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-green w3-border w3-round w3-border-teal w3-hover-text-teal w3-hover-border-teal w3-button" onclick="contribution()" style="transition:0.5s;"><i class="material-icons">language</i> Contribution</button></p>
                 </div>
               </div>
@@ -732,24 +749,67 @@
             </div>
           </div>
 
+          <!-- Extra Projects Button -->
+          <div class="w3-container" id="more" style="display:none;">
+
+            <!-- Project - 3 (HTMLPad) -->
+            <div class="w3-hide-small w3-panel w3-cursive w3-round-large w3-center w3-row">
+              <div class="w3-col m6 l7">
+                <img
+                  src="Images/Photo-4.png"
+                  class="w3-button w3-image w3-padding w3-hover-none"
+                  alt="HTMLPad"
+                  style="transition: 1s; cursor: pointer; right: -5vw; top:-5vh; position: relative; width: 1500px;"
+                  title="HTMLPad"
+                  onclick="github_project_3_website()">
+                </img>
+              </div>
+              <div class = "w3-col m6 l5">
+                <div class="w3-card-4 w3-white w3-round-xlarge" style="z-index:1; position: relative">
+                  <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-blue w3-text-white w3-xxlarge">HTMLPad</p>
+                  <p class = "w3-container w3-margin w3-padding-16 w3-text-blue">This is a HTML application which helps developers to practice HTML language. This application auto-generates output of the given HTML input within few seconds.<br>
+                <button class="w3-blue w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-blue w3-border w3-round w3-border-blue w3-hover-text-blue w3-hover-border-blue w3-button" onclick="github_project_3()" style="transition:0.5s;"><i class="fab fa-github"></i> Github</button>
+                <button class="w3-white w3-text-blue w3-card-4 w3-margin w3-ripple w3-hover-pale-blue w3-border w3-round w3-border-blue w3-hover-text-blue w3-hover-border-blue w3-button" onclick="github_project_3_website()" style="transition:0.5s;"><i class="fas fa-external-link-alt"></i> Website</button></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="w3-hide-large w3-hide-medium w3-panel w3-cursive w3-round-large w3-center w3-row">
+              <div class="w3-col m12 l12">
+                <div class="w3-card-4 w3-white w3-round-xlarge">
+                  <p class = "w3-continer w3-round-xlarge-top w3-card-4 w3-padding-16 w3-blue w3-text-white w3-xlarge">HTMLPad</p>
+                  <div class="w3-row w3-center">
+                    <img
+                      src="Images/Photo-4.png"
+                      class="w3-button w3-image w3-padding w3-hover-none"
+                      alt="HTMLPad"
+                      style="transition: 1s; cursor: pointer;"
+                      title="HTMLPad"
+                      onclick="github_project_3_website()">
+                    </img>
+                  </div>
+                  <p class = "w3-container w3-margin w3-padding-16 w3-text-blue">This is a HTML application which helps developers to practice HTML language.<br>
+                    <button class="w3-blue w3-text-white w3-card-4 w3-margin w3-ripple w3-hover-pale-blue w3-border w3-round w3-border-blue w3-hover-text-blue w3-hover-border-blue w3-button" onclick="github_project_3()" style="transition:0.5s;"><i class="fab fa-github"></i> Github</button>
+                    <button class="w3-white w3-text-blue w3-card-4 w3-margin w3-ripple w3-hover-pale-blue w3-border w3-round w3-border-blue w3-hover-text-blue w3-hover-border-blue w3-button" onclick="github_project_3_website()" style="transition:0.5s;"><i class="fas fa-external-link-alt"></i> Website</button></p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <br>
 
-          <!-- Extra Projects Button
-
-          <div class="w3-container" id="more" style="display:none;">hello</div>
           <div class="w3-panel w3-center w3-cursive">
             <button class="w3-button w3-pink w3-padding-16 w3-round w3-hover-pale-red w3-hover-text-pink w3-border w3-border-pink w3-hover-border-pink" onclick="toggle()" id="btn">
               <span id="s" style="display:block;">Show More</span>
               <span id="h" style="display:none;">Show Less</span>
             </button>
+
           </div>
           <script>
-            $("#btn").click(function(){
-              $("#more").toggle(1000);
-              $("#s").toggle();
-              $("#h").toggle();
-            });
-          </script>-->
+
+          </script>
+          <br>
         </div>
       </div>
 
