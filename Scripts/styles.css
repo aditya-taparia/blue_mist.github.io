@@ -1,0 +1,118 @@
+/* Icons */
+.material-icons {
+  vertical-align: -22.5%;
+}
+
+.w3-round-xlarge-top{
+  border-top-left-radius:16px;
+  border-top-right-radius:16px;
+}
+
+/* Background Image */
+html {
+  background: url(Images/Banner.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Left Animation */
+.w3-animate-left{
+  position:relative;animation:animateleft 1s
+  }
+@keyframes animateleft{
+  from{left:-300px;opacity:0}
+  to{left:0;opacity:1}
+}
+/* Top Animation for Navigation */
+.w3-animate-top1{
+  position:relative;
+  animation:animatetop 0.5s
+}
+.w3-animate-top2{
+  position:relative;
+  animation:animatetop 0.75s
+}
+.w3-animate-top3{
+  position:relative;
+  animation:animatetop 1s
+}
+.w3-animate-top4{
+  position:relative;
+  animation:animatetop 1.25s
+}
+.w3-animate-top5{
+  position:relative;
+  animation:animatetop 1.5s
+}
+.w3-animate-top6{
+  position:relative;
+  animation:animatetop 1.75s
+}
+.w3-animate-top{
+  position:relative;
+  animation:animatetop 1s
+}
+@keyframes animatetop{
+  from{top:-300px;opacity:0}
+  to{top:0;opacity:1}
+}
+
+/* Zoom Effect */
+.w3-animate-zoom {
+  animation:animatezoom 1s
+}
+@keyframes animatezoom{
+  from{transform:scale(0)}
+  to{transform:scale(1)}
+}
+
+/* Icon for list */
+.mi-green>li:before{
+    content: 'arrow_right';
+    font-family: 'Material Icons';
+    font-size: 25px;
+    vertical-align: -22%;
+    color: forestgreen;
+}
+.mi-red>li:before{
+    content: 'arrow_right';
+    font-family: 'Material Icons';
+    font-size: 25px;
+    vertical-align: -22%;
+    color: crimson;
+}
+.mi-blue>li:before{
+    content: 'arrow_right';
+    font-family: 'Material Icons';
+    font-size: 25px;
+    vertical-align: -22%;
+    color: dodgerblue;
+}
+ul{
+  list-style-type: none;
+}
+
+/* Horixontal Rule */
+hr.w3-div{
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+
+.w3-hover-pale-purple:hover{
+   color:#9c27b0!important;
+   background-color:#fff0f5!important
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body, html{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
